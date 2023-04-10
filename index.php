@@ -22,7 +22,7 @@
     foreach ($category as $category)
     {
     ?>
-    <div style="background-color:<?= $category[2]?>">
+    <div id="category" style="background-color:<?= $category[2]?>; padding: 10px;">
     <h1><?= $category[1] ?></h1>
     <div id="content">
     
@@ -38,7 +38,7 @@
             <img class="pic" src="<?= $count[2]?>"/>
             
         </div>
-        <div class="h2div"> <h2><?= $count[1]?></h2> 
+        <div class="h2div"> <h4><?= $count[1]?></h4> 
     </div>
     </a>
 
