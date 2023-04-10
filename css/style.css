@@ -2,7 +2,7 @@ body {
     padding-left: 5%;
     padding-right: 5%;
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(269.87deg, #5C4EFF 0.38%, #DB00FF 99.88%);
+    background: linear-gradient(270deg, #5C4EFF 0.38%, #DB00FF 99.88%);
 }
 header{
     text-align: center;
@@ -15,7 +15,7 @@ header{
 #content {
     display: grid;
     grid-column-gap: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, 150px);
     
 }
 .item{
