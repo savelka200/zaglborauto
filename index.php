@@ -12,17 +12,17 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header><img src="res/whitelogo.png" id="logo"/> <a href="newContent.php">Админка</a></header>
+    <header><img src="res/whitelogo.png" id="logo" /> <a target="_blank" href="newContent.php"><img id="admin" src="res/gear.png"/></a></header>
     <?php
     include_once('scripts/connect.php');
     ?>
     <?php
-    $category = $link->query("SELECT * FROM `categories`");
+    $category = $link->query("SELECT * FROM `categories` ORDER BY `priority` DESC");
     $category = mysqli_fetch_all($category);
     foreach ($category as $category)
     {
     ?>
-    <div id="category" style="background-color:<?= $category[2]?>; padding: 10px;">
+    <div id="category" style="background-color:<?= $category[2]?>; padding: 10px; border: solid rgba(255, 255, 255, 0.4);  border-radius: 10px; display: inline-block;min-width: 600px; text-align: center;">
     <h1><?= $category[1] ?></h1>
     <div id="content">
     

@@ -9,8 +9,14 @@
 </head>
 
 <body>
+    <?php 
+        session_start();
+        if ($_SESSION['user']['rights'] != 'admin'){
+            header('Location: login.php');
+        }
+    ?>
     <a href="index.php">Домой</a>
-    Добавить сервис:
+    Вход
     <form action="scripts/addContent.php" method="post" enctype="multipart/form-data">
         <input type="text" name="text" placeholder="Название" required> <br>
         <input type="text" name="url" placeholder="Ссылка" required> <br>
