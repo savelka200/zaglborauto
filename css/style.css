@@ -5,27 +5,31 @@ body {
     background: linear-gradient(270deg, #3a319e 0.38%, #710083 99.88%);
     color: #fff;
     text-align: center;
-    display: grid;
-    grid-gap: 15px;
-    justify-items: stretch;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    
 }
 header{
     text-align: center;
     padding: 10px;
 }
+
 #logo{
     height: 70px;
 }
 #admin{
     height: 30px;
 }
-
+#allcontent{
+    display: grid;
+    grid-gap: 15px;
+    justify-items: stretch;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+}
 #content {
     display: grid;
     grid-column-gap: 15px;
     grid-template-columns: repeat(auto-fit, 150px);
     justify-content: center;
+    
     
 }
 .item{

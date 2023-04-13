@@ -13,6 +13,7 @@
 </head>
 <body>
     <header><img src="res/whitelogo.png" id="logo" /> <a target="_blank" href="newContent.php"><img id="admin" src="res/gear.png"/></a></header>
+    <div id="allcontent">
     <?php
     include_once('scripts/connect.php');
     ?>
@@ -21,15 +22,19 @@
     $category = mysqli_fetch_all($category);
     foreach ($category as $category)
     {
+    $count = $link->query("SELECT * FROM `content` where `categ_id` = '$category[0]'");
+    $count = mysqli_fetch_all($count);
+    if(count($count) == 0){
+        continue;
+    }
     ?>
-    <div id="category" style="background-color:<?= $category[2]?>; padding: 10px; border: solid rgba(255, 255, 255, 0.4);  border-radius: 10px; display: inline-block;min-width: 600px; text-align: center;">
+    <div id="category" style="background-color:<?= $category[2]?>; padding: 10px; border: solid rgba(255, 255, 255, 0.4);  border-radius: 10px; display: inline-block; text-align: center;">
     <h1><?= $category[1] ?></h1>
     <div id="content">
     
     
     <?php
-    $count = $link->query("SELECT * FROM `content` where `categ_id` = '$category[0]'");
-    $count = mysqli_fetch_all($count);
+    
     foreach ($count as $count)
     {
     ?>
@@ -50,5 +55,6 @@
     <?php
      } 
     ?>
+    </div>
 </body>
 </html>
