@@ -2,7 +2,8 @@ body {
     padding-left: 5%;
     padding-right: 5%;
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(270deg, #3a319e 0.38%, #710083 99.88%);
+    /*background: linear-gradient(270deg, #3a319e 0.38%, #710083 99.88%);*/
+    background-color: rgb(73 45 171);
     color: #fff;
     text-align: center;
     

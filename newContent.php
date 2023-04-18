@@ -55,7 +55,7 @@
     Изменить сервис: 
     <div style="display: grid;grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));">
     <?php
-    $count = $link->query("SELECT * FROM `content`");
+    $count = $link->query("SELECT * FROM `content` ORDER BY `text`");
     $count = mysqli_fetch_all($count);
     
     foreach ($count as $count)

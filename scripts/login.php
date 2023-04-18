@@ -22,7 +22,7 @@ else{
     }
     else{
         $_SESSION['response'] = 'Неверный логин или пароль';
-        header('Location: ../auth.php');
+        header('Location: ../index.php');
 
         echo $response;
     }
